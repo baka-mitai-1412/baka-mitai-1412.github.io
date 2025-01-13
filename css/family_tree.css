@@ -1,0 +1,174 @@
+/**
+ * CSS by: Ilya Pestov (https://codepen.io/Pestov/pen/AvQmxv)
+ */
+
+@import "./stylesheet.css";
+
+@media (orientation: landscape) {
+    .tree_pic_1 {
+        width: 25vmin;
+        height: 25vmin;
+    }
+
+    .tree_pic_2 {
+        width: 18vmin;
+        height: 18vmin;
+    }
+
+    .tree_pic_3 {
+        width: 13vmin;
+        height: 13vmin;
+    }
+}
+
+@media (orientation: portrait) {
+    .tree_pic_1 {
+        width: 15vmin;
+        height: 15vmin;
+    }
+
+    .tree_pic_2 {
+        width: 9vmin;
+        height: 9vmin;
+    }
+
+    .tree_pic_3 {
+        width: 5vmin;
+        height: 5vmin;
+    }
+}
+
+.tree,
+ul,
+li,
+a {
+    margin: 0;
+    padding: 0;
+}
+
+.tree ul {
+    max-width: fit-content;
+    padding-top: 0.2vmax;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+.tree li {
+    float: left;
+    text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 1vmax 0.2vmax 0 0.2vmax;
+
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+/*We will use ::before and ::after to draw the connectors*/
+.tree li::before,
+.tree li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 0.2vmax solid var(--fg);
+    width: 50%;
+    height: 1vmax;
+}
+
+.tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: 0.2vmax solid var(--fg);
+}
+
+/*We need to rvmaxove left-right connectors from elvmaxents without 
+any siblings*/
+.tree li:only-child::after,
+.tree li:only-child::before {
+    display: none;
+}
+
+/*Rvmaxove space from the top of single children*/
+.tree li:only-child {
+    padding-top: 0;
+}
+
+/*Rvmaxove left connector from first child and 
+right connector from last child*/
+.tree li:first-child::before,
+.tree li:last-child::after {
+    border: 0 none;
+}
+
+/*Adding back the vertical connector to the last nodes*/
+.tree li:last-child::before {
+    border-right: 0.2vmax solid var(--fg);
+    border-radius: 0 0.2vmax 0 0;
+    -webkit-border-radius: 0 0.2vmax 0 0;
+    -moz-border-radius: 0 0.2vmax 0 0;
+}
+
+.tree li:first-child::after {
+    border-radius: 0.2vmax 0 0 0;
+    -webkit-border-radius: 0.2vmax 0 0 0;
+    -moz-border-radius: 0.2vmax 0 0 0;
+}
+
+/*Time to add downward connectors from parents*/
+.tree ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 0.2vmax solid var(--fg);
+    width: 0;
+    height: 1vmax;
+}
+
+.tree li a {
+    border: 0.2vmax solid var(--fg);
+    padding: 0.2vmax 0.3vmax;
+    text-decoration: none;
+    color: var(--fg);
+    /* font-family: arial, verdana, tahoma; */
+    font-size: 1vmax;
+    display: inline-block;
+    margin: 0;
+
+    border-radius: 0.2vmax;
+    -webkit-border-radius: 0.2vmax;
+    -moz-border-radius: 0.2vmax;
+
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+}
+
+/*Time for some hover effects*/
+/*We will apply the hover effect the the lineage of the elvmaxent also*/
+.tree li a:hover,
+.tree li a:hover+ul li a {
+    background: var(--bgs);
+    color: var(--fg);
+    border: 0.2vmax solid var(--bgs);
+}
+
+/*Connector styles on hover*/
+.tree li a:hover+ul li::after,
+.tree li a:hover+ul li::before,
+.tree li a:hover+ul::before,
+.tree li a:hover+ul ul::before {
+    border-color: var(--bgs);
+}
+
+/*
+ * Thats all. I hope you enjoyed it.
+ * Thanks :)
+ */

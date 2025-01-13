@@ -1,0 +1,263 @@
+/* Built by Andrew James M. Gan of BSCS 0D on Dec. 02, 2024 */
+
+@import "./gruvbox-dark.css";
+
+@font-face {
+    font-family: 'font-awesome';
+    src: url('/css/font/fontawesome.woff2') format('woff2'),
+        url('/css/font/fontawesome.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    font-family: "arial";
+    font-size: 2vw;
+}
+
+@media (orientation: landscape) {
+    .a4-width {
+        width: 80%;
+    }
+}
+
+@media (orientation: portrait) {
+    .a4-width {
+        width: 95%;
+    }
+}
+
+
+.bg {
+    background-color: var(--bg);
+}
+
+.bigger-p {
+    font-size: 1.5em;
+}
+
+.center-div {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: block;
+}
+
+.div-h1 {
+    background-color: var(--bgs);
+    overflow: hidden;
+
+    display: flex;
+    margin-top: 1vw;
+    padding: 5vw 8vw;
+
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.list-display {
+    display: list-item;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.dropdown {
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* text-align: center; */
+    margin: 0;
+    z-index: 0;
+}
+
+.dropdown-content {
+    background-color: var(--bgh);
+    font-size: 1em;
+    word-wrap: normal;
+    display: none;
+    /* padding: 0.7em 0.8em; */
+    z-index: 1;
+
+    position: absolute;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    z-index: 1;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.navbar {
+    background-color: var(--bgh);
+    /* overflow: hidden; */
+    /* The cause of the dropdown to not appear */
+    position: sticky;
+    top: 0;
+
+    border-radius: 0.5em;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    margin-right: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 0;
+}
+
+.navbar * {
+    list-style: none;
+
+    font-size: 1em;
+    padding: 0.7em 0.8em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar-text {
+    background-color: var(--bgh);
+    color: var(--fg);
+
+    font-size: 1em;
+    padding: 0.7em 0.8em;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+    z-index: 0;
+}
+
+.navbar-text:hover {
+    background-color: var(--bgs);
+    color: var(--fg);
+
+    font-size: 1em;
+    padding: 0.7em 0.8em;
+    text-align: center;
+    text-decoration: none;
+}
+
+*.navbar-text-active {
+    background-color: var(--bgs);
+    color: var(--fg);
+
+    font-size: 1em;
+    padding: 0.7em 0.8em;
+    text-align: center;
+    text-decoration: none;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.left-align {
+    text-align: left;
+    clear: left;
+}
+
+.right-align {
+    text-align: right;
+    margin-left: 60%;
+}
+
+
+.nodecoration {
+    list-style: none;
+    text-decoration: none;
+}
+
+.nopadding {
+    padding: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.text {
+    color: var(--fg);
+}
+
+.top-div-sticky {
+    position: sticky;
+    top: 0;
+}
+
+.visibile-div {
+    border-top: 3px solid var(--fg);
+}
+
+/* -------------------------------------------------------------------------- */
+
+a {
+    color: var(--fg);
+    text-decoration: underline;
+}
+
+body div .navbar {
+    margin-left: 0vw;
+    margin-right: 0vw;
+}
+
+* .dropdown * {
+    margin-left: 0vw;
+    margin-right: 0vw;
+}
+
+body * {
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+h1 {
+    color: var(--fg);
+    font-size: 3em;
+    font-weight: bolder;
+}
+
+h2 {
+    color: var(--fg);
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+
+h3 {
+    color: var(--fg);
+    font-size: 2.17em;
+    font-weight: bolder;
+}
+
+h4 {
+    color: var(--fg);
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+h5 {
+    color: var(--fg);
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+h6 {
+    color: var(--fg);
+    font-size: 1.17em;
+    font-weight: bolder;
+}
+
+p {
+    color: var(--fg);
+    font-size: 1em;
+}
+
+ul {
+    font-size: 1.5em;
+}
+
+ol {
+    font-size: 1em;
+}
+
+li {
+    color: var(--fg);
+    font-size: 1em;
+}

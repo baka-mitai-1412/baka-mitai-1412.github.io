@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+
+<!-- Built by Andrew James M. Gan of BSCS 1D on Dec. 02, 2024 -->
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <link rel="stylesheet" href="/css/slideshow.css">
+
+    <title>Gan's Personal Site</title>
+</head>
+
+<body class="bg">
+    <nav class="navbar nodecoration">
+        <a class="navbar-text" href="/index.html">Home</a>
+        <a class="navbar-text-active" href="/accomplishments.html">Accomplishments</a>
+        <a class="navbar-text" href="/projects.html">Projects</a>
+
+        <div class="dropdown">
+            <a class="navbar-text" href="/about.html">About Me</a>
+            <div class="dropdown-content">
+                <a class="navbar-text list-display" href="/src/about/resume.html">Resume</a>
+                <a class="navbar-text list-display" href="/src/about/family_tree.html">Family Tree</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="div-h1">
+        <h1>Accomplishments</h1>
+    </div>
+
+    <h4>Solo Learn</h4>
+
+    <br>
+    <div class="visibile-div"></div>
+    <br>
+
+    <div class="slideshow-container center-div">
+        <div class="mySlides fade sololearn-cert">
+            <div class="numbertext">1 / 4</div>
+            <img src="/img/certificates/sololearn/c1.png">
+        </div>
+        <div class="mySlides fade sololearn-cert">
+            <div class="numbertext">2 / 4</div>
+            <img src="/img/certificates/sololearn/c2.png">
+        </div>
+        <div class="mySlides fade sololearn-cert">
+            <div class="numbertext">3 / 4</div>
+            <img src="/img/certificates/sololearn/java1.png">
+        </div>
+        <div class="mySlides fade sololearn-cert">
+            <div class="numbertext">4 / 4</div>
+            <img src="/img/certificates/sololearn/java2.png">
+        </div>
+    </div>
+
+    <br>
+    <div class="visibile-div"></div>
+    <br>
+
+    <!-- JS Code by: W3 Schools (https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+    <script>
+        let slideIndexSololearn = 0;
+        showSlidesSololearn();
+
+        function showSlidesSololearn() {
+            let i;
+            let slides = document.getElementsByClassName("sololearn-cert");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndexSololearn++;
+            if (slideIndexSololearn > slides.length) {slideIndexSololearn = 1}
+            slides[slideIndexSololearn - 1].style.display = "block";
+            setTimeout(showSlidesSololearn, 10000); // Change image every 2 seconds
+        } 
+    </script>
+
+</body>
+
+</html>
