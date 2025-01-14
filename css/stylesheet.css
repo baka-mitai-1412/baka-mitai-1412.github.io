@@ -193,17 +193,7 @@ a {
     text-decoration: underline;
 }
 
-body div .navbar {
-    margin-left: 0vw;
-    margin-right: 0vw;
-}
-
-* .dropdown * {
-    margin-left: 0vw;
-    margin-right: 0vw;
-}
-
-body * {
+body {
     margin-left: 5vw;
     margin-right: 5vw;
 }
@@ -259,5 +249,5 @@ ol {
 
 li {
     color: var(--fg);
-    font-size: 1em;
+    font-size: 0.8em;
 }
